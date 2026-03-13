@@ -3,26 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KRAVCHUK1990 | Granit AI Store</title>
+    <title>Digital Business Card</title>
     <style>
         :root {
-            --stone-dark: #1a1e21;       /* Темний антрацит */
-            --stone-blue: #3d5a6c;       /* Холодний синій перелив */
-            --stone-accent: #5c727a;     /* Сірий граніт */
-            --text-light: #f1f5f9;
+            /* Палітра на основі Лезниківського граніту та існуючих контактів */
+            --granit-red-dark: #7d2a2a;   /* Темно-червоний граніт */
+            --granit-red-medium: #b84d4d; /* Світліший червоний відтінок */
+            --stone-dark: #1a1e21;       /* Темний антрацит (чорні вкраплення) */
+            --text-dark: #1a1e21;
             --glass: rgba(255, 255, 255, 0.9);
+            --glass-border: rgba(255, 255, 255, 0.4);
         }
 
         body {
             margin: 0;
             padding: 20px 0;
             font-family: 'Segoe UI', Roboto, Helvetica, sans-serif;
-            background: radial-gradient(circle at center, #3d5a6c 0%, #1a1e21 100%);
+            /* Встановлення зображення текстури Лезниківського граніту на задній фон */
+            background-image: url('leznik_granit.jpg');
+            background-size: cover; /* Зображення покриває весь екран */
+            background-position: center; /* Центрування зображення */
+            background-repeat: no-repeat;
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: var(--stone-dark);
+            color: var(--text-dark);
         }
 
         .card {
@@ -31,16 +37,16 @@
             max-width: 360px;
             padding: 40px 25px;
             border-radius: 24px;
-            box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.6); /* Глибша тінь для контрасту */
             text-align: center;
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.3);
+            border: 1px solid var(--glass-border);
         }
 
         .logo-container {
             width: 150px;
             height: 150px;
-            margin: 0 auto 20px;
+            margin: 0 auto 30px;
             position: relative;
         }
 
@@ -53,36 +59,19 @@
             border: 2px solid #fff;
         }
 
-        h1 {
-            margin: 0;
-            font-size: 22px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            font-weight: 800;
-        }
-
-        .subtitle {
-            color: var(--stone-blue);
-            font-size: 14px;
-            margin-bottom: 25px;
-            display: block;
-            font-weight: 600;
-            letter-spacing: 1px;
-        }
-
         /* Стилі для графіка роботи */
         .schedule {
-            background: rgba(61, 90, 108, 0.05);
+            background: rgba(125, 42, 42, 0.08); /* Легкий червоний відтінок фону */
             border-radius: 15px;
             padding: 15px;
             margin-bottom: 25px;
-            border: 1px solid rgba(61, 90, 108, 0.1);
+            border: 1px solid rgba(125, 42, 42, 0.15);
             font-size: 13px;
         }
 
         .schedule-title {
             font-weight: 700;
-            color: var(--stone-blue);
+            color: var(--granit-red-dark);
             text-transform: uppercase;
             margin-bottom: 10px;
             display: block;
@@ -103,7 +92,7 @@
         }
 
         .day { font-weight: 600; color: #444; }
-        .lunch { color: var(--stone-accent); font-size: 11px; font-style: italic; }
+        .lunch { color: var(--stone-dark); font-size: 11px; font-style: italic; opacity: 0.8; }
         .weekend { color: #d946ef; font-weight: 700; }
 
         .links {
@@ -123,26 +112,20 @@
             justify-content: center;
             color: white;
             font-size: 15px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
 
-        .tg { background-color: #2c4a5c; }
-        .viber { background-color: #59527a; }
-        .email { background-color: #2a2d2f; }
+        /* Оновлені кольори кнопок під червону палітру */
+        .tg { background-color: #8c3a3a; }   /* Теплий червоно-коричневий */
+        .viber { background-color: #7a66a1; } /* Трохи тепліший фіолетовий */
+        .email { background-color: #2a2d2f; } /* Залишаємо темний антрацит */
 
         .btn:hover {
             transform: translateY(-3px);
             filter: brightness(1.1);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
         }
 
-        footer {
-            margin-top: 30px;
-            font-size: 10px;
-            color: #777;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-        }
     </style>
 </head>
 <body>
@@ -152,9 +135,6 @@
             <img src="logo.png" alt="Granit AI Logo" class="profile-img">
         </div>
         
-        <h1>@KRAVCHUK1990</h1>
-        <span class="subtitle">Granit AI Store</span>
-
         <div class="schedule">
             <span class="schedule-title">Графік роботи: 8:00 – 18:00</span>
             
@@ -192,9 +172,6 @@
             </a>
         </div>
 
-        <footer>
-            Digital Business Card
-        </footer>
     </div>
 
 </body>
