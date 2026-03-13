@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kravchuk 1990 | Digital Card</title>
+    <style>
+        :root {
+            --bg-gradient: linear-gradient(135deg, #60a5fa 0%, #a855f7 50%, #ec4899 100%);
+            --glass: rgba(255, 255, 255, 0.9);
+            --text: #333;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: var(--bg-gradient);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            background: var(--glass);
+            width: 90%;
+            max-width: 400px;
+            padding: 30px;
+            border-radius: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid white;
+            object-fit: cover;
+            margin-bottom: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            margin: 10px 0 5px;
+            font-size: 24px;
+            color: var(--text);
+        }
+
+        p {
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .btn {
+            text-decoration: none;
+            padding: 15px;
+            border-radius: 15px;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .btn:active {
+            transform: scale(0.97);
+        }
+
+        /* Стилі кнопок */
+        .tg { background: #0088cc; }
+        .viber { background: #7360f2; }
+        .phone { background: #22c55e; }
+
+        .btn-icon {
+            margin-right: 10px;
+            font-size: 20px;
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 12px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <img src="https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/logo.png" alt="Logo" class="profile-img">
+        
+        <h1>@KRAVCHUK1990</h1>
+        <p>Універсальні контакти</p>
+
+        <div class="links">
+            <a href="https://t.me/KRAVCHUK1990" class="btn tg">
+                Telegram
+            </a>
+            <a href="viber://chat?number=%2B380958546754" class="btn viber">
+                Viber
+            </a>
+            <a href="tel:+380958546754" class="btn phone">
+                Зателефонувати
+            </a>
+        </div>
+
+        <footer>
+            &copy; 2024 Kravchuk. Всі права захищені.
+        </footer>
+    </div>
+
+</body>
+</html>
