@@ -6,7 +6,6 @@
     <title>KRAVCHUK1990 | Granit AI Store</title>
     <style>
         :root {
-            /* Палітра на основі вашого логотипу */
             --stone-dark: #1a1e21;       /* Темний антрацит */
             --stone-blue: #3d5a6c;       /* Холодний синій перелив */
             --stone-accent: #5c727a;     /* Сірий граніт */
@@ -16,9 +15,8 @@
 
         body {
             margin: 0;
-            padding: 0;
+            padding: 20px 0;
             font-family: 'Segoe UI', Roboto, Helvetica, sans-serif;
-            /* Фон з м'яким кам'яним градієнтом */
             background: radial-gradient(circle at center, #3d5a6c 0%, #1a1e21 100%);
             min-height: 100vh;
             display: flex;
@@ -40,9 +38,9 @@
         }
 
         .logo-container {
-            width: 180px;
-            height: 180px;
-            margin: 0 auto 25px;
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 20px;
             position: relative;
         }
 
@@ -50,7 +48,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            border-radius: 15px; /* Форма кристала */
+            border-radius: 15px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.2);
             border: 2px solid #fff;
         }
@@ -66,21 +64,57 @@
         .subtitle {
             color: var(--stone-blue);
             font-size: 14px;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             display: block;
             font-weight: 600;
             letter-spacing: 1px;
         }
 
+        /* Стилі для графіка роботи */
+        .schedule {
+            background: rgba(61, 90, 108, 0.05);
+            border-radius: 15px;
+            padding: 15px;
+            margin-bottom: 25px;
+            border: 1px solid rgba(61, 90, 108, 0.1);
+            font-size: 13px;
+        }
+
+        .schedule-title {
+            font-weight: 700;
+            color: var(--stone-blue);
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            display: block;
+            font-size: 12px;
+        }
+
+        .schedule-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 4px;
+            padding-bottom: 4px;
+            border-bottom: 1px dashed rgba(0,0,0,0.05);
+        }
+
+        .schedule-row:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .day { font-weight: 600; color: #444; }
+        .lunch { color: var(--stone-accent); font-size: 11px; font-style: italic; }
+        .weekend { color: #d946ef; font-weight: 700; }
+
         .links {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 12px;
         }
 
         .btn {
             text-decoration: none;
-            padding: 18px;
+            padding: 16px;
             border-radius: 12px;
             font-weight: 600;
             transition: all 0.3s ease;
@@ -88,29 +122,24 @@
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 16px;
+            font-size: 15px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.15);
         }
 
-        /* Стилізація кнопок під камінь */
         .tg { background-color: #2c4a5c; }
         .viber { background-color: #59527a; }
         .email { background-color: #2a2d2f; }
 
         .btn:hover {
             transform: translateY(-3px);
-            filter: brightness(1.2);
+            filter: brightness(1.1);
             box-shadow: 0 8px 20px rgba(0,0,0,0.3);
         }
 
-        .btn:active {
-            transform: translateY(-1px);
-        }
-
         footer {
-            margin-top: 40px;
+            margin-top: 30px;
             font-size: 10px;
-            color: #666;
+            color: #777;
             text-transform: uppercase;
             letter-spacing: 3px;
         }
@@ -125,6 +154,31 @@
         
         <h1>@KRAVCHUK1990</h1>
         <span class="subtitle">Granit AI Store</span>
+
+        <div class="schedule">
+            <span class="schedule-title">Графік роботи: 8:00 – 18:00</span>
+            
+            <div class="schedule-row">
+                <span class="day">Пн, Ср, Чт</span>
+                <span class="lunch">Обід: 13:50 – 14:50</span>
+            </div>
+            <div class="schedule-row">
+                <span class="day">Вівторок</span>
+                <span class="lunch">Обід: 15:00 – 16:00</span>
+            </div>
+            <div class="schedule-row">
+                <span class="day">П'ятниця</span>
+                <span class="lunch">Обід: 12:50 – 13:50</span>
+            </div>
+            <div class="schedule-row">
+                <span class="day">Субота</span>
+                <span class="lunch">Обід: 12:00 – 13:00</span>
+            </div>
+            <div class="schedule-row">
+                <span class="day">Неділя</span>
+                <span class="weekend">Вихідний</span>
+            </div>
+        </div>
 
         <div class="links">
             <a href="https://t.me/KRAVCHUK1990" target="_blank" class="btn tg">
